@@ -1,0 +1,12 @@
+Operador ternário 
+
+utiliza ? (Verdadeiro) e  : (Falso)
+
+
+const pontuacaoUsuario = 500;
+const nivelUsuario = pontuacaoUsuario >=1000? 'Usuário VIP' : 'Usuário Normal';
+
+console.log(nivelUsuario);
+
+
+Isso é a mesma coisa que um if e else, porém utilizando operador ternário me alguns casos pode simplificar o código.
