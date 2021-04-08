@@ -1,0 +1,5 @@
+npm install express -E    instalo o express em uma versao fixa, sem o -E  ele vai ficar com o circuflexo e sempre atualizar
+
+
+npm update  ---atualiza meus pacotes do projeto
+
