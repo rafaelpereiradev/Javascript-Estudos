@@ -1,0 +1,1 @@
+mongodb+srv://estudojs:conexaoatlas@estudojs.u1evk.mongodb.net/tarefasDB?retryWrites=true&w=majority
