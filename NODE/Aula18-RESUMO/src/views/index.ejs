@@ -1,0 +1,17 @@
+<%- include('includes/head'); %>
+  <body>
+    <section class="container">
+      <h1>
+       lorem normal
+      </h1>
+      <form action="/" method="post">
+        <!-- Sempre colocar em todos os formulários de um site, segurança de token csrf -->
+        <input type="hidden" name="_csrf" value="<%= csrfToken%>"> 
+        <label">Cliente : <input type="text" name="cliente"></label>
+        <button>Enviar</button>
+        </form>
+    </section>
+    
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+</html>

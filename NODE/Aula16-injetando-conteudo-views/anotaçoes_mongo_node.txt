@@ -1,0 +1,10 @@
+Para que tenhamos segurança no uso da senha, configuramos o pacote dotenv .
+
+npm install dotenv
+
+
+Mongoose faz a modelagem dos dados, ele trata o schema.
+
+
+
+ambos serão dependencias do projeto
