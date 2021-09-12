@@ -1,3 +1,0 @@
-o express precisa entender que queremos tratar o req.body, para isso utilizamos o url encoded -> app.use(express.urlencoded(extended:true)).
-
-Ou seja, express, quando alguem postar alguma coisa, trate o body e me entregue um objeto do que esta sendo postado.
