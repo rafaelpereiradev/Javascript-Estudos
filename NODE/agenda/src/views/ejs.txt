@@ -9,3 +9,16 @@
 <% } else { %>
   <%= exibe outra coisa %>
 <% } %>
+
+
+incluir conteudo de outro html ejs no index...
+
+<%- include(nomedapastadosarquivos/nomedoarquivo)%   ---> sempre lembrar de colocar o traço depois do sinal de porcentagem.
+
+outro exemplo 
+
+<%- include('includes/head') %> -->conteudo head
+
+<h1>Hello, world!</h1>  --> conteudo body ou index 
+
+<%- include('includes/footer') %> -->conteudo footer
