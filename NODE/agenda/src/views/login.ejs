@@ -8,12 +8,16 @@
 
 
     <div class="col-lg-8 my-3"> <!-- Coluna do meio -->
-      <h1 class="text-center">Login</h1>
+      <h1 class="text-center">Login e Registre-se</h1>
       <p class="text-center lead">Entre ou faça seu cadastro</p>
+      
 
       <div class="row">
         <div class="col-lg">
           <h4>Faça seu cadastro</h4>
+          <p>Preencha o formulário abaixo para se cadastrar</p>
+          <form action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
           <div class="form-group">
             <label>Endereço de email</label>
             <input type="email" class="form-control" name="email">
@@ -21,14 +25,17 @@
           </div>
           <div class="form-group">
             <label>Senha</label>
-            <input type="password" class="form-control" name="senha">
+            <input type="password" class="form-control" name="password">
           </div>
 
           <button type="submit" class="btn btn-primary my-2">Criar Conta</button>
+        </form>
   
         </div>
         <div class="col-lg">
           <h4>Faça seu Login</h4>
+          <p>Insira seu login já cadastrado para entrar</p>
+          <form action="/login/login" method="POST">
           <div class="form-group">
             <label>E-mail Cadastrado</label>
             <input type="email" class="form-control" name="email">
@@ -36,10 +43,11 @@
           </div>
           <div class="form-group">
             <label>Senha</label>
-            <input type="password" class="form-control" name="senha">
+            <input type="password" class="form-control" name="password">
           </div>
           
           <button type="submit" class="btn btn-primary my-2">Entrar</button>
+        </form>
         </div>
       </div>
      
