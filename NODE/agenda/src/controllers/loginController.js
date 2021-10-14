@@ -13,7 +13,6 @@ exports.register = async function (req, res) {
       return res.redirect('back');
     });
     return;
-  
   }
 
   res.send(login.errors);
