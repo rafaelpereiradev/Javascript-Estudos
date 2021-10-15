@@ -1,2 +1,2 @@
 # Javascript-Estudos
-Meus arquivos de estudos Javascript
+Meus arquivos de estudos do Curso Javascript e Typescript
