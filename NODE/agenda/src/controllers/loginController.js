@@ -27,10 +27,11 @@ exports.register = async function (req, res) {
   }
 };
 
-exports.userLogin = async function (req, res) {
+exports.userlogin = async function (req, res) {
+  
   try {
     const login = new Login(req.body);
-    await login.login()
+    await login.login();
 
     if (login.errors.length > 0) {
       req.flash('errors', login.errors);

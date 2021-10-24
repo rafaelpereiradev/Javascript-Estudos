@@ -17,20 +17,20 @@ class Login {
   }
   async login() {
     this.valida();
+    console.log(this.body);
     if (this.errors.length > 0) return;
     this.user = await LoginModel.findOne({ email: this.body.email });
-    
-    if(!this.user){
+    if (this.errors.length > 0) return;
+    if (!this.user) {
       this.errors.push('Usuário não existe');
       return;
     }
 
-    if(!bcryptjs.compareSync(this.body.password, this.user.password)){
+    if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
       this.errors.push('Senha Inválida');
       this.user = null;
       return;
     }
-    
   }
   async register() {
     this.valida();
@@ -42,10 +42,11 @@ class Login {
     this.user = await LoginModel.create(this.body);
   }
   async userExists() {
-   this.user = await LoginModel.findOne({ email: this.body.email });
+    this.user = await LoginModel.findOne({ email: this.body.email });
     if (this.user) this.errors.push('Usuario ja existe');
   }
   valida() {
+    console.log(this.body);
     //Validação
     //O e-mail precisa ser válido, a senha precisa ter entre 3 e 50 caracteres.
     this.cleanUp();
