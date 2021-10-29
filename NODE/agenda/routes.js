@@ -10,6 +10,6 @@ route.get('/', homeController.index);
 
 route.get('/login', loginController.login);
 route.post('/login/register', loginController.register);
-route.post('/login/userlogin', loginController.login);
+route.post('/login/userlogin', loginController.userlogin);
 
 module.exports = route;

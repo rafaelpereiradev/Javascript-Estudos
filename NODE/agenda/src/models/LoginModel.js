@@ -20,7 +20,7 @@ class Login {
     console.log(this.body);
     if (this.errors.length > 0) return;
     this.user = await LoginModel.findOne({ email: this.body.email });
-    if (this.errors.length > 0) return;
+    // if (this.errors.length > 0) return;
     if (!this.user) {
       this.errors.push('Usuário não existe');
       return;
@@ -28,7 +28,9 @@ class Login {
 
     if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
       this.errors.push('Senha Inválida');
+      console.log(this.user);
       this.user = null;
+
       return;
     }
   }
