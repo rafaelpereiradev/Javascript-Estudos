@@ -25,7 +25,7 @@ class Login {
       this.errors.push('Usuário não existe');
       return;
     }
-//analisar o retorno.
+    //comparar login e register
     if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
       this.errors.push('Senha Inválida');
       console.log(this.user);
