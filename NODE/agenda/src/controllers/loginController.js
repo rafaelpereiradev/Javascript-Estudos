@@ -1,6 +1,8 @@
 const Login = require('../models/LoginModel');
-exports.login = (req, res) => {
-  res.render('login');
+
+exports.indexLogin = (req, res) => {
+  if (req.session.user) return res.render('login-logado');
+  return res.render('login');
 };
 
 exports.register = async function (req, res) {
@@ -11,30 +13,29 @@ exports.register = async function (req, res) {
     if (login.errors.length > 0) {
       req.flash('errors', login.errors);
       req.session.save(function () {
-       
         return res.redirect('/login');
       });
       return;
     }
-      req.flash('success', 'Seu usuário foi criado com sucesso');
-      req.session.save(function () {
-        return res.redirect('/login');
-      });
-    
+
+    req.flash('success', 'Seu usuário foi criado com sucesso.');
+    req.session.save(function () {
+      return res.redirect('/login');
+    });
   } catch (e) {
     console.log(e);
     return res.render('404');
   }
 };
 
-exports.userlogin = async function(req, res) {
+exports.login = async function (req, res) {
   try {
     const login = new Login(req.body);
     await login.login();
 
-    if(login.errors.length > 0) {
+    if (login.errors.length > 0) {
       req.flash('errors', login.errors);
-      req.session.save(function() {
+      req.session.save(function () {
         return res.redirect('/login');
       });
       return;
@@ -42,10 +43,10 @@ exports.userlogin = async function(req, res) {
 
     req.flash('success', 'Você entrou no sistema.');
     req.session.user = login.user;
-    req.session.save(function() {
+    req.session.save(function () {
       return res.redirect('/login');
     });
-  } catch(e) {
+  } catch (e) {
     console.log(e);
     return res.render('404');
   }
