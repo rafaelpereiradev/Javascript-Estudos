@@ -51,3 +51,4 @@ exports.login = async function (req, res) {
     return res.render('404');
   }
 };
+// finalizado.
