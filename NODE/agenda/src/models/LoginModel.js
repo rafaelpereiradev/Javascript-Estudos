@@ -15,7 +15,7 @@ class Login {
     this.errors = [];
     this.user = null;
   }
-
+//
   async login() {
     this.valida();
     if (this.errors.length > 0) return;
