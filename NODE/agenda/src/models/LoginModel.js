@@ -22,7 +22,7 @@ class Login {
     this.user = await LoginModel.findOne({ email: this.body.email });
 
     if (!this.user) {
-      this.errors.push('Usuário não existe.');
+      this.errors.push('Usuário não existe!');
       return;
     }
 
