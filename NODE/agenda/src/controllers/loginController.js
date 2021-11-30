@@ -17,7 +17,7 @@ exports.register = async function (req, res) {
       });
       return;
     }
-    
+
 
     req.flash('success', 'Seu usuário foi criado com sucesso!');
     req.session.save(function () {
@@ -42,7 +42,7 @@ exports.login = async function (req, res) {
       return;
     }
 
-    req.flash('success', 'Você entrou no sistema.');
+    req.flash('success', 'Você entrou no sistema!');
     req.session.user = login.user;
     req.session.save(function () {
       return res.redirect('/login');
