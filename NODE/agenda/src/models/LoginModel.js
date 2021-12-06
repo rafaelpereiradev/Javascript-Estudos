@@ -14,6 +14,7 @@ class Login {
     this.body = body;
     this.errors = [];
     this.user = null;
+
   }
 //
   async login() {
@@ -27,7 +28,7 @@ class Login {
     }
 
     if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
-      this.errors.push('Senha inválida, tente novamente');
+      this.errors.push('Senha inválida, tente novamente!');
       this.user = null;
       return;
     }
@@ -62,7 +63,7 @@ class Login {
 
     // A senha precisa ter entre 3 e 50
     if (this.body.password.length < 3 || this.body.password.length > 50) {
-      this.errors.push('A senha precisa ter entre 3 e 50 caracteres.');
+      this.errors.push('A senha precisa ter entre 3 e 50 caracteres!');
     }
   }
 
