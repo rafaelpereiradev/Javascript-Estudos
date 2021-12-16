@@ -1,0 +1,27 @@
+Comentários = <!---->
+
+
+
+ - omissao 
+ - simples
+ - duplas
+
+<a href=https://google.com></a>  -- isso funciona caso n'ao tenha mais nenhum atributoa mais para adicionar.
+<a href='https://google.com' title='teste'>link </a>  --- para add title tive que deixar o link entre aspas.
+
+Recomendado = aspas duplas.
+
+Atributos globais mais utilizados
+
+ - class = utilizado para aplicar estilo CSS, acessar on javascript.
+ - contenteditable =  impede que haja alteração do conteúdo.
+ - data- = sempre usar separacao por traços, utilizado para expadir que tipos de atributo posso coloar on html e depois fazer lógico o js
+ - hidden = esconde a tag na página
+ - id = atribui um unico identificador se for repetir usa-se uma classe.
+ - style = conseguimos alterar alguns estilos direto no html, mas nao é recomendado, é mais utilizado classes em CSS
+ - tabindex = quando for utilizado o tab para navegar nas paginas, defino a navegação pela ordem tabindex=1 tabindex=2 etc...
+ - title = Definir um título,no elemento quando deixamos o mouse parado em cima.
+
+
+
+
